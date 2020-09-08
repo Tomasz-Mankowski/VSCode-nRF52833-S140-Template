@@ -1,0 +1,97 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": "relative",
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make clean",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "flash",
+            "type": "shell",
+            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make flash",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": "relative",
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "flash_softdevice",
+            "type": "shell",
+            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make flash_softdevice",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "sdk_config",
+            "type": "shell",
+            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make sdk_config",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "c_cpp_properties",
+            "type": "shell",
+            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make c_cpp_properties",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "rtt",
+            "type": "shell",
+            "command": "${env:ProgramFiles(x86)}/SEGGER/JLink/JLinkRTTViewer.exe",
+            "args": ["-a"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []            
+        }
+    ]
+}

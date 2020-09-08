@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "type": "cortex-debug",
+            "request": "launch",
+            "serverpath": "C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL",
+            "servertype": "jlink",
+            "armToolchainPath": "${workspaceFolder}/../../Tools/gcc-arm-none-eabi-9-2020-q2-update-win32-1/bin/",
+            "cwd": "${workspaceRoot}",
+            "executable": "./_build/nrf52833_xxaa.out",
+            "device": "nRF52833_xxAA",
+            "svdFile": "nrf52833.svd",
+            "runToMain": true,
+            "preLaunchTask": "flash",
+        }
+    ]
+}
