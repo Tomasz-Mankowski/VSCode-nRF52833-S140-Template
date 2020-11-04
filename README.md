@@ -34,7 +34,7 @@ In order to setup the environment following tools are needed to be installed:
 1. Install all the tools, note the paths.
 2. Clone this repository.
 3. Adjust paths in `.bat` file to match your setup.
-4. Set *GNU Arm Embedded Toolchain* and its version in `<Nordic SDK>\components\toolchain\gcc\Makefile.windows` file.
+4. Set *GNU Arm Embedded Toolchain* path and its version in `<Nordic SDK>\components\toolchain\gcc\Makefile.windows` file.
 
 Additional step (not mandatory). Setup a convenient keyboard shortcut to run tasks in VSCode:
 
