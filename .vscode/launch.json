@@ -8,15 +8,15 @@
             "name": "Cortex Debug",
             "type": "cortex-debug",
             "request": "launch",
-            "serverpath": "C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL",
+            "serverpath": "${env:SEGGER_TOOLS}/JLinkGDBServerCL",
             "servertype": "jlink",
-            "armToolchainPath": "${workspaceFolder}/../../Tools/gcc-arm-none-eabi-9-2020-q2-update-win32-1/bin/",
+            "armToolchainPath": "${env:GNU_GCC}",
             "cwd": "${workspaceRoot}",
             "executable": "./_build/nrf52833_xxaa.out",
             "device": "nRF52833_xxAA",
             "svdFile": "nrf52833.svd",
             "runToMain": true,
-            "preLaunchTask": "flash",
+            "preLaunchTask": "flash"
         }
     ]
 }

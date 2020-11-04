@@ -11,7 +11,7 @@ This template uses a modified `Makefile` from the nRF SDK and supports following
 - flash (*nrfjprog*),
 - SoftDevices flash (*nrfjprog*),
 - debugging (*Cortex Debug*),
-- nRF SKD Configuration (*CMSIS Configuration Wizard*)
+- nRF SKD Configuration (*CMSIS Configuration Wizard*),
 - SEGGER's Real Time Transfer console.
 
 ## Tools
@@ -26,14 +26,14 @@ In order to setup the environment following tools are needed to be installed:
 - [Nordic SDK v17.0.0 or above](https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK/Download#infotabs) - software development kit for nRF52 Series SoCs
 - [nRF Command Line Tools](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools/Download#infotabs) - set of tools for development, programming and debugging of nRF52 SoCs
 - [SEGGER J-Link Software](https://www.segger.com/downloads/jlink/) - set of tool to be used with J-Link probe
-- [Java](https://java.com/en/) - to run the *CMSIS Configuration Wizard*
 - [Python 3](https://www.python.org/downloads/) - to generate the `c_cpp_properties.json`
+- [Java](https://java.com/en/) - to run the *CMSIS Configuration Wizard*
 
 ## How to setup
 
-1. Install all the tools, note the paths to: *Nordic SDK*, *GNU Arm Embedded Toolchain*, *xPack Windows Build Tools*, *nRF Command Line Tools* and *SEGGER J-Link Software*.
+1. Install all the tools, note the paths.
 2. Clone this repository.
-3. Adjust paths in `.bat` file (**WIP**)
+3. Adjust paths in `.bat` file to match your setup.
 4. Set *GNU Arm Embedded Toolchain* and its version in `<Nordic SDK>\components\toolchain\gcc\Makefile.windows` file.
 
 Additional step (not mandatory). Setup a convenient keyboard shortcut to run tasks in VSCode:
@@ -44,7 +44,7 @@ Additional step (not mandatory). Setup a convenient keyboard shortcut to run tas
 
 ## Running
 
-1. Run the `.bat` file to open the VSCode workspace (**WIP**).
+1. Run the `.bat` file to open the VSCode workspace.
 2. Edit `SRC_FILES`, `INC_FOLDERS`, `CFLAGS` and `ASMFLAGS` of the `Makefile` to match your requirements (default ones are ok).
 3. Run the *c_cpp_properties* task to generate a proper InteliSense input each time you edit the `Makefile`.
 4. Hit `F5` to start a build -> flash -> debug workflow.
@@ -57,6 +57,7 @@ Following tasks are configured for this VSCode template:
 - *clean*
 - *flash* - flash the main binary
 - *flash_softdevice* - flash the SoftDevices stack
+- *erase* - erase flash
 - *sdk_config* - run the *CMSIS Configuration Wizard*
 - *rtt* - run the *Real Time Transfer console*
 - *c_cpp_properties* - generate a `c_cpp_properties.json` based on the `Makefile`

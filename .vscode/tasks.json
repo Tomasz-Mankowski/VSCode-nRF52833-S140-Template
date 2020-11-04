@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make",
+            "command": "${env:GNU_TOOLS}/make",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -30,7 +30,7 @@
         {
             "label": "clean",
             "type": "shell",
-            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make clean",
+            "command": "${env:GNU_TOOLS}/make clean",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -39,7 +39,7 @@
         {
             "label": "flash",
             "type": "shell",
-            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make flash",
+            "command": "${env:GNU_TOOLS}/make flash",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -59,7 +59,16 @@
         {
             "label": "flash_softdevice",
             "type": "shell",
-            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make flash_softdevice",
+            "command": "${env:GNU_TOOLS}/make flash_softdevice",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "erase",
+            "type": "shell",
+            "command": "${env:GNU_TOOLS}/make erase",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -68,7 +77,7 @@
         {
             "label": "sdk_config",
             "type": "shell",
-            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make sdk_config",
+            "command": "${env:GNU_TOOLS}/make sdk_config",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -77,7 +86,7 @@
         {
             "label": "c_cpp_properties",
             "type": "shell",
-            "command": "D:/Projects/nRF/Tools/xpack-windows-build-tools-2.12.2/bin/make c_cpp_properties",
+            "command": "${env:GNU_TOOLS}/make c_cpp_properties",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -86,7 +95,7 @@
         {
             "label": "rtt",
             "type": "shell",
-            "command": "${env:ProgramFiles(x86)}/SEGGER/JLink/JLinkRTTViewer.exe",
+            "command": "${env:SEGGER_TOOLS}/JLinkRTTViewer.exe",
             "args": ["-a"],
             "options": {
                 "cwd": "${workspaceFolder}"

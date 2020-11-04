@@ -69,7 +69,7 @@
                 "S140",
                 "SOFTDEVICE_PRESENT"
             ],
-            "compilerPath": "D:/Projects/nRF/Tools/gcc-arm-none-eabi-9-2020-q2-update-win32-1/bin/arm-none-eabi-gcc.exe",
+            "compilerPath": "${env:GNU_GCC}/arm-none-eabi-gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64"

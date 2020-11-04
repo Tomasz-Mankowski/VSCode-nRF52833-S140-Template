@@ -2,7 +2,7 @@ PROJECT_NAME     := nRF52833_S140
 TARGETS          := nrf52833_xxaa
 OUTPUT_DIRECTORY := _build
 
-SDK_ROOT := ../../nRF5_SDK_17.0.0_9d13099
+SDK_ROOT := $(NRF_SDK)
 PROJ_DIR := .
 
 $(OUTPUT_DIRECTORY)/nrf52833_xxaa.out: \
@@ -187,23 +187,23 @@ $(foreach target, $(TARGETS), $(call define_target, $(target)))
 # Flash the program
 flash: default
 	@echo Flashing: $(OUTPUT_DIRECTORY)/nrf52833_xxaa.hex
-	nrfjprog -f nrf52 --program $(OUTPUT_DIRECTORY)/nrf52833_xxaa.hex --sectorerase
-	nrfjprog -f nrf52 --reset
+	$(NRF_TOOLS)/nrfjprog -f nrf52 --program $(OUTPUT_DIRECTORY)/nrf52833_xxaa.hex --sectorerase
+	$(NRF_TOOLS)/nrfjprog -f nrf52 --reset
 
 # Flash softdevice
 flash_softdevice:
 	@echo Flashing: s140_nrf52_7.0.1_softdevice.hex
-	nrfjprog -f nrf52 --program $(SDK_ROOT)/components/softdevice/s140/hex/s140_nrf52_7.0.1_softdevice.hex --sectorerase
-	nrfjprog -f nrf52 --reset
+	$(NRF_TOOLS)/nrfjprog -f nrf52 --program $(SDK_ROOT)/components/softdevice/s140/hex/s140_nrf52_7.0.1_softdevice.hex --sectorerase
+	$(NRF_TOOLS)/nrfjprog -f nrf52 --reset
 
 erase:
-	nrfjprog -f nrf52 --eraseall
+	$(NRF_TOOLS)/nrfjprog -f nrf52 --eraseall
 
 SDK_CONFIG_FILE := ./Config/sdk_config.h
 CMSIS_CONFIG_TOOL := $(SDK_ROOT)/external_tools/cmsisconfig/CMSIS_Configuration_Wizard.jar
 sdk_config:
-	java -jar $(CMSIS_CONFIG_TOOL) $(SDK_CONFIG_FILE)
+	$(JAVA)/java -jar $(CMSIS_CONFIG_TOOL) $(SDK_CONFIG_FILE)
 
 INC_FOLDER_COUNT := $(words $(INC_FOLDERS))
 c_cpp_properties:
-	python c_cpp_properties.py $(PROJECT_NAME) $(CC) $(INC_FOLDER_COUNT) $(INC_FOLDERS) $(CFLAGS) 
+	$(PYTHON_3)/python c_cpp_properties.py $(PROJECT_NAME) $(CC) $(INC_FOLDER_COUNT) $(INC_FOLDERS) $(CFLAGS) 

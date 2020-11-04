@@ -40,7 +40,7 @@ if __name__ == "__main__":
         file.write('\n')
     file.write('            ],\n')
 
-    file.write('            "compilerPath": "' + compilerPath + '",\n')
+    file.write('            "compilerPath": "${env:GNU_GCC}/arm-none-eabi-gcc.exe",\n')
 
     file.write('            "cStandard": "c11",\n')
     file.write('            "cppStandard": "c++17",\n')
