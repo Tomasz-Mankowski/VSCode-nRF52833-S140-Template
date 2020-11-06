@@ -192,8 +192,8 @@ flash: default
 
 # Flash softdevice
 flash_softdevice:
-	@echo Flashing: s140_nrf52_7.0.1_softdevice.hex
-	$(NRF_TOOLS)/nrfjprog -f nrf52 --program $(SDK_ROOT)/components/softdevice/s140/hex/s140_nrf52_7.0.1_softdevice.hex --sectorerase
+	@echo Flashing: s140_nrf52_$(NRF_SD_VER)_softdevice.hex
+	$(NRF_TOOLS)/nrfjprog -f nrf52 --program $(SDK_ROOT)/components/softdevice/s140/hex/s140_nrf52_$(NRF_SD_VER)_softdevice.hex --sectorerase
 	$(NRF_TOOLS)/nrfjprog -f nrf52 --reset
 
 erase:

@@ -1,3 +1,6 @@
+rem S140 SoftDevices Version provided with the nRF SDK
+set NRF_SD_VER=7.0.1
+
 rem Location of Nordic SDK
 set NRF_SDK=../../nRF5_SDK_17.0.0_9d13099
 

@@ -33,7 +33,9 @@ In order to setup the environment following tools are needed to be installed:
 
 1. Install all the tools, note the paths.
 2. Clone this repository.
-3. Adjust paths in `.bat` file to match your setup.
+3. Adjust `.bat` file to match your setup:
+    - Set `NRF_SD_VER` with a SoftDevices version provided with your nRF SDK (see `<Nordic SDK>\components\softdevice\s140\hex`),
+    - Set all tool paths.
 4. Set *GNU Arm Embedded Toolchain* path and its version in `<Nordic SDK>\components\toolchain\gcc\Makefile.windows` file.
 
 Additional step (not mandatory). Setup a convenient keyboard shortcut to run tasks in VSCode:
@@ -47,7 +49,8 @@ Additional step (not mandatory). Setup a convenient keyboard shortcut to run tas
 1. Run the `.bat` file to open the VSCode workspace.
 2. Edit `SRC_FILES`, `INC_FOLDERS`, `CFLAGS` and `ASMFLAGS` of the `Makefile` to match your requirements (default ones are ok).
 3. Run the *c_cpp_properties* task to generate a proper InteliSense input each time you edit the `Makefile`.
-4. Hit `F5` to start a build -> flash -> debug workflow.
+4. Run the *flash_softdevices* task - not flashing the SoftDevices can cause runtime errors.
+5. Hit `F5` to start a build -> flash -> debug workflow.
 
 ## Tasks
 
