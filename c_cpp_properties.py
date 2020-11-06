@@ -44,7 +44,7 @@ if __name__ == "__main__":
 
     file.write('            "cStandard": "c11",\n')
     file.write('            "cppStandard": "c++17",\n')
-    file.write('            "intelliSenseMode": "gcc-x64"\n')
+    file.write('            "intelliSenseMode": "gcc-arm"\n')
     file.write('        }\n')
     file.write('    ],\n')
     file.write('    "version": 4\n')
