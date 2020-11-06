@@ -182,7 +182,7 @@ include $(TEMPLATE_PATH)/Makefile.common
 
 $(foreach target, $(TARGETS), $(call define_target, $(target)))
 
-.PHONY: flash flash_softdevice erase generate_c_cpp_properties
+.PHONY: flash flash_softdevice erase c_cpp_properties
 
 # Flash the program
 flash: default
