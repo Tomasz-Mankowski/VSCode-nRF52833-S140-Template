@@ -22,4 +22,4 @@ set JAVA=C:/Program Files (x86)/Java/jre1.8.0_191/bin
 rem Location of Python 3
 set PYTHON_3=C:/Python37
 
-"%AppData%/../Local/Programs/Microsoft VS Code/Code.exe" nRF52833_S140.code-workspace
+start "%AppData%/../Local/Programs/Microsoft VS Code/Code.exe" nRF52833_S140.code-workspace
