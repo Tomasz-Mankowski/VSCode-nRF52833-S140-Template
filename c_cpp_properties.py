@@ -14,6 +14,8 @@ if __name__ == "__main__":
     
     defines = [v[len('-D'):] for v in sys.argv[4+includePathCount:] if v.startswith('-D')]
 
+    sdk_root = sys.argv[-1]
+
     file = open(".vscode/c_cpp_properties.json", "w")
     
 
@@ -25,7 +27,7 @@ if __name__ == "__main__":
 
     file.write('            "includePath": [\n')
     for i, path in enumerate(includePath):
-        file.write('                "' + path + '"')
+        file.write('                "' + path.replace(sdk_root, '${env:NRF_SDK}') + '"')
         if i != includePathCount - 1:
             file.write(',')
         file.write('\n')

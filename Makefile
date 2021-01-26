@@ -206,4 +206,4 @@ sdk_config:
 
 INC_FOLDER_COUNT := $(words $(INC_FOLDERS))
 c_cpp_properties:
-	$(PYTHON_3)/python c_cpp_properties.py $(PROJECT_NAME) $(CC) $(INC_FOLDER_COUNT) $(INC_FOLDERS) $(CFLAGS) 
+	$(PYTHON_3)/python c_cpp_properties.py $(PROJECT_NAME) $(CC) $(INC_FOLDER_COUNT) $(INC_FOLDERS) $(CFLAGS) $(SDK_ROOT)

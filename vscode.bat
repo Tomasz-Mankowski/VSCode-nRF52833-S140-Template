@@ -1,8 +1,8 @@
 rem S140 SoftDevices Version provided with the nRF SDK
-set NRF_SD_VER=7.0.1
+set NRF_SD_VER=7.2.0
 
 rem Location of Nordic SDK
-set NRF_SDK=../../nRF5_SDK_17.0.0_9d13099
+set NRF_SDK=../nRF5_SDK_17.0.2_d674dde
 
 rem Location of nRF Command Line Tools
 set NRF_TOOLS=C:/Program Files (x86)/Nordic Semiconductor/nrf-command-line-tools/bin
@@ -17,9 +17,9 @@ rem Location of [SEGGER J-Link Software
 set SEGGER_TOOLS=C:/Program Files (x86)/SEGGER/JLink
 
 rem Location of Java
-set JAVA=C:/Program Files (x86)/Java/jre1.8.0_191/bin
+set JAVA=C:/Program Files/Java/jre1.8.0_271/bin
 
 rem Location of Python 3
-set PYTHON_3=C:/Python37
+set PYTHON_3=C:/Python39
 
 start "%AppData%/../Local/Programs/Microsoft VS Code/Code.exe" nRF52833_S140.code-workspace
